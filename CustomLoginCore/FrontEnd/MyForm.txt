@@ -51,6 +51,7 @@ class MyForm extends React.Component {
             },
           }).then((res) => { 
             //Return Token
+            console.log(res.data);
             axios({
                 // Endpoint to send files
                 url: `https://localhost:44344/login`,
@@ -70,8 +71,6 @@ class MyForm extends React.Component {
           }).catch((err) => { 
             console.log(err);
           });
-        
-          console.log(test1);
 
         console.log(jsonData);
     }                                   
