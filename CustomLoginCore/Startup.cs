@@ -1,4 +1,5 @@
 using CustomLoginCore.Services;
+using CustomLoginCore.Services.TokenValidationService;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -36,6 +37,7 @@ namespace CustomLoginCore
             });
 
             services.AddTransient<ITokenService, TokenService>();
+            services.AddTransient<ITokenValidationService, TokenValidationService>();
 
             services.AddRazorPages();
         }
